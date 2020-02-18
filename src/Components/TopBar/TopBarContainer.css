@@ -1,0 +1,9 @@
+#top-bar {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    height: auto;
+    width: 200px;
+}
