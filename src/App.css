@@ -1,5 +1,17 @@
 .App {
-  padding: 35px 30%;
+  padding: 35px 20%;
+}
+
+@media (max-width: 1200px){
+  .App {
+    padding: 15%;
+  }
+}
+
+@media (max-width: 800px) {
+  .App {
+    padding: 35px 35px;
+  }
 }
 
 
