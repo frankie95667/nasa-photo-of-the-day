@@ -3,6 +3,7 @@ import { Card } from "reactstrap";
 import NasaCardBody from './NasaCardBody';
 import NasaCardImg from './NasaCardImg';
 import NasaCardTitle from './NasaCardTitle';
+import './NasaCard.css';
 
 const NasaCard = (props) => {
     return (
@@ -11,6 +12,7 @@ const NasaCard = (props) => {
                 imageTitle={props.imageData['title']} />
             <NasaCardImg 
                 imageUrl={props.imageData['url']}
+                imageType={props.imageData['media_type']}
                 imageTitle={props.imageData['title']} />
             <NasaCardBody 
                     imageDate={props.imageData['date']} 
