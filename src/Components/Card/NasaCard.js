@@ -6,23 +6,6 @@ import NasaCardTitle from './NasaCardTitle';
 import './NasaCard.css';
 
 const NasaCard = (props) => {
-    const displayImage = () => {
-        if(props.loading){
-          return (
-            <NasaCardImg 
-                imageUrl={'https://www.stevensegallery.com/g/1200/900'}
-                imageType={props.imageData['media_type']}
-                imageTitle={props.imageData['title']} />
-            );
-        }
-        return (
-            <NasaCardImg 
-                imageUrl={props.imageData['url']}
-                imageType={props.imageData['media_type']}
-                imageTitle={props.imageData['title']} />
-        );
-      }
-
     return (
         <Card>
             <NasaCardTitle

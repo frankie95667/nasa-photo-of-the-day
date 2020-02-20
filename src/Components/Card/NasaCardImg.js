@@ -11,6 +11,7 @@ const NasaCardImg = props => {
       return (
         <div className="videoWrapper">
           <iframe
+            onLoad={()=> props.onLoad()}
             src={props.imageUrl}
             width="560"
             height="315"
