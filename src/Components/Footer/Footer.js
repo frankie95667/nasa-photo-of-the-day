@@ -1,13 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer>
+        <StyledFooter>
             <p>&copy; {new Date().getFullYear()} Space</p>
-        </footer>
+        </StyledFooter>
     )
 }
+
+const StyledFooter = styled.footer`
+    padding: 30px 0;
+    text-align: right;
+`;
 
 export default Footer;

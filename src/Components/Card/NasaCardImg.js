@@ -12,6 +12,7 @@ const NasaCardImg = props => {
         <div className="videoWrapper">
           <iframe
             onLoad={()=> props.onLoad()}
+            title='youtube'
             src={props.imageUrl}
             width="560"
             height="315"

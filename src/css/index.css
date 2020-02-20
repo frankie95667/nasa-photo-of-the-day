@@ -1,3 +1,7 @@
+@tailwind base; 
+@tailwind components; 
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,4 +14,20 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.App {
+  padding: 35px 20%;
+}
+
+@media (max-width: 1200px){
+  .App {
+    padding: 15%;
+  }
+}
+
+@media (max-width: 800px) {
+  .App {
+    padding: 35px 35px;
+  }
 }

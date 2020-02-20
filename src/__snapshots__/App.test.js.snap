@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component matches the snapshot 1`] = `
+Array [
+  <nav
+    className="sc-AxiKw cpRozU navbar navbar-light bg-light"
+  >
+    <a
+      className="navbar-brand"
+      href="/"
+    >
+      <img
+        className="sc-AxirZ bXlJzY"
+        src="logo.png"
+      />
+    </a>
+  </nav>,
+  <div
+    className="sc-AxhUy coQrbY"
+  >
+    <form
+      className=""
+    >
+      <div
+        className="row form-group"
+      >
+        <label
+          className="col-sm-2 col-form-label"
+          htmlFor="date"
+        >
+          Change Date
+        </label>
+        <div
+          className="col-sm-4"
+        >
+          <input
+            className="form-control"
+            data-date=""
+            id="date"
+            name="date"
+            onChange={[Function]}
+            type="date"
+          />
+        </div>
+        <div
+          className="col"
+        >
+          <button
+            aria-label={null}
+            className="btn btn-secondary"
+            onClick={[Function]}
+            type="button"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+    <footer
+      className="sc-AxhCb euQJVj"
+    >
+      <p>
+        © 
+        2020
+         Space
+      </p>
+    </footer>
+  </div>,
+]
+`;

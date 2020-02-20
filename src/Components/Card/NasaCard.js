@@ -1,13 +1,13 @@
 import React from 'react';
-import { Card } from "reactstrap";
 import NasaCardBody from './NasaCardBody';
 import NasaCardImg from './NasaCardImg';
 import NasaCardTitle from './NasaCardTitle';
+import styled from 'styled-components';
 import './NasaCard.css';
 
 const NasaCard = (props) => {
     return (
-        <Card>
+        <Card loading={props.loading ? 1 : 0} className="max-w-full rounded overflow-hidden shadow-lg">
             <NasaCardTitle
                 imageTitle={props.imageData['title']} />
             <NasaCardImg 
@@ -22,5 +22,10 @@ const NasaCard = (props) => {
         </Card>
     )
 }
+
+const Card = styled.div`
+    opacity: ${props => (props.loading ? 0 : 1) }
+    transition: opacity 1s;
+`;
 
 export default NasaCard;

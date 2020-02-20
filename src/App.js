@@ -3,13 +3,14 @@ import NasaCard from './Components/Card/NasaCard';
 import TopBarContainer from './Components/TopBar/TopBarContainer';
 import Footer from './Components/Footer/Footer';
 import {Form, Button, Col, Label, FormGroup, Input} from 'reactstrap';
+import styled from 'styled-components';
 import axios from "axios";
-import "./App.css";
 
 const API_KEY = "k0Pk1YxvkvaZ2agWoiM9efuyscQElxLQFVaX8W4g";
 const API_URL = "https://api.nasa.gov/planetary/apod";
 
 function App() {
+
   const [imageData, setImageData] = useState();
   const [date, setDate] = useState('');
   const [loading, setLoading] = useState(false);
@@ -43,12 +44,20 @@ function App() {
     <>
     <TopBarContainer />
     
-    <div className="App">
+    <StyledApp>
       <Form>
         <FormGroup row>
           <Label for="date" sm={2}>Change Date</Label>
           <Col sm={4}>
-            <Input onChange={(e)=> setDate(e.target.value)} type="date" name="date" id="date" data-date={date} />
+            <Input 
+              onChange={(e)=> {
+                e.preventDefault();
+                setDate(e.target.value)
+              }} 
+              type="date" 
+              name="date" 
+              id="date" 
+              data-date={date} />
           </Col>
           <Col>
             <Button onClick={()=> updateQuery()}>Submit</Button>
@@ -59,9 +68,21 @@ function App() {
         <NasaCard imageData={imageData} loading={loading} onLoad={onLoad} />
       ) : null}
       <Footer />
-    </div>
+    </StyledApp>
     </>
   );
 }
+
+const StyledApp = styled.div`
+  padding: 35px 20%;
+
+  @media (max-width: 1200px){
+      padding: 15%;
+  }
+
+  @media (max-width: 800px) {
+      padding: 35px 35px;
+  }
+`;
 
 export default App;
